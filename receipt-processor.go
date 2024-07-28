@@ -106,6 +106,7 @@ func getPoints(w http.ResponseWriter, r *http.Request) {
 	// 	http.Error(w, err.Error(), http.StatusBadRequest)
 	// 	return
 	// }
+	fmt.Println("getPoints output (points): ", receipts[id])
 	json.NewEncoder(w).Encode(map[string]int{"points": receipts[id]})
 }
 
