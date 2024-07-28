@@ -63,3 +63,26 @@ curl http://localhost:5670/receipts/process --include --header "Content-Type: ap
   }'
 
 curl http://localhost:5670/receipts/85b3063b-c31f-423d-a942-df5821d8f762/points -v
+
+
+curl http://host.docker.internal:5670/receipts/process --include --header "Content-Type: application/json" --request "POST" --data '{
+    "retailer": "M&M Corner Market",
+    "purchaseDate": "2022-03-20",
+    "purchaseTime": "14:33",
+    "items": [
+      {
+        "shortDescription": "Gatorade",
+        "price": "2.25"
+      },{
+        "shortDescription": "Gatorade",
+        "price": "2.25"
+      },{
+        "shortDescription": "Gatorade",
+        "price": "2.25"
+      },{
+        "shortDescription": "Gatorade",
+        "price": "2.25"
+      }
+    ],
+    "total": "9.00"
+  }'
