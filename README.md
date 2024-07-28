@@ -2,6 +2,12 @@
 ### Run instructions:
 In commands.txt, there are some curl commands that I pasted for easy use. This is an example run:
 ```
+// initialize go.mod, go.sum, and add outside repos
+go mod init receipt_service
+go get github.com/google/uuid
+go get github.com/gorilla/mux
+
+// run server
 go run receipt-processor.go
 ```
 
